@@ -3,7 +3,7 @@ import time
 import pandas as pd
 import numpy as np
 
-city_main = {
+city_names = {
     "chicago": "chicago.csv",
     "new york city": "new_york_city.csv",
     "washington": "washington.csv",
@@ -34,7 +34,7 @@ def get_filters():
     city = input(
         "Which city would you like to discover, Washington, new york city, or chicago?\n>>"
     ).lower()
-    while city not in city_main:
+    while city not in city_names:
         print("oops we only have info about washington, new york city, and chicago\n>>")
         city = input(
             "Which city would you like to discover, Washington, new york city, or chicago?\n>>"
@@ -69,7 +69,7 @@ def load_data(city, month, day):
     """here we are loading the data from the provided csv files that include all the data that a user might need to know about"""
     """ the last part about this function i used what was included in the project section for project problem 3 and solution 3, i tried to solve the problem and this code is way better and taught me this way """
     # to allow pandas to read the available csvs
-    df = pd.read_csv(city_main[city])
+    df = pd.read_csv(city_names[city])
 
     # to convert the columns to dates to extract the exact month and day based on previously specified inputs
     df["Start Time"] = pd.to_datetime(df["Start Time"])
