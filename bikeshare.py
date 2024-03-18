@@ -25,7 +25,11 @@ days = [
 def get_filters():
     """
     first i assigned the city, month and day as global names in order to handle the gender and dob types that is
-    not inculded in all the csv sheets"""
+    not inculded in all the csv sheets.
+
+    Returns:
+        tuple: A tuple containing the selected city, month, and day filters.
+    """
 
     global city, month, day
     print(f"Hello! it seems that you want to explore some US bikeshare data!")
