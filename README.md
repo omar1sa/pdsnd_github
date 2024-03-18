@@ -7,7 +7,7 @@
 Bike share project
 
 ### Description
-Describe what your project is about and what it does
+This is a bike share project
 
 ### Files used
 Python and SQL files are used
