@@ -28,14 +28,14 @@ def get_filters():
     not inculded in all the csv sheets"""
 
     global city, month, day
-    print("Hello! it seems that you want to explore some US bikeshare data!")
+    print(f"Hello! it seems that you want to explore some US bikeshare data!")
 
     # city inputs that allows the user to check the data based on his needs lower is assigned to avoid upper and lower cases issues
     city = input(
         "Which city would you like to discover, Washington, new york city, or chicago?\n>>"
     ).lower()
     while city not in city_names:
-        print("oops we only have info about washington, new york city, and chicago\n>>")
+        print(f"oops we only have info about washington, new york city, and chicago\n>>")
         city = input(
             "Which city would you like to discover, Washington, new york city, or chicago?\n>>"
         ).lower()
